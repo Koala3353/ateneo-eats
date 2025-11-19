@@ -22,5 +22,23 @@
     document.addEventListener("scroll", collapseNavbar);
   }
 
+  // Close navbar when a nav link is clicked on mobile
+  var navCollapseEl = document.querySelector('#navcol-1');
+  var navToggler = document.querySelector('.navbar-toggler');
+
+  if (navCollapseEl && navToggler && typeof bootstrap !== 'undefined') {
+    var navCollapse = new bootstrap.Collapse(navCollapseEl, { toggle: false });
+    var navLinks = navCollapseEl.querySelectorAll('.nav-link');
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        var togglerVisible = window.getComputedStyle(navToggler).display !== 'none';
+        if (togglerVisible && navCollapseEl.classList.contains('show')) {
+          navCollapse.hide();
+        }
+      });
+    });
+  }
+
 })(); // End of use strict
 

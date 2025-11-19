@@ -1,0 +1,160 @@
+/* Basic Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    color: #001196;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #001196 !important;
+    transition: background-color 0.5s ease;
+}
+
+.navbar .navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #f8f9fa !important;
+}
+
+/* Cart */
+[data-reflow-type="view-cart"] {
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+[data-reflow-type="view-cart"] span {
+    color: inherit;
+}
+
+/* Reflow quantity inputs */
+[data-reflow-type] input[type="number"] {
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 17, 150, 0.2);
+    border-radius: 0.35rem;
+    padding: 0.35rem 0.5rem;
+    width: 3.5ch;
+    text-align: center;
+    font-weight: 600;
+}
+
+[data-reflow-type] input[type="number"]:focus {
+    outline: 2px solid rgba(0, 17, 150, 0.35);
+    outline-offset: 1px;
+}
+
+/* Reflow product card readability */
+.ref-product-name {
+    color: #0f172a !important;
+    font-weight: 600;
+}
+
+.ref-quantity-widget,
+.ref-quantity-widget input,
+.ref-quantity-widget span {
+    color: #0f172a !important;
+}
+
+.ref-quantity-widget .ref-decrease,
+.ref-quantity-widget .ref-increase {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 17, 150, 0.15);
+}
+
+.ref-quantity-widget .ref-decrease span,
+.ref-quantity-widget .ref-increase span {
+    line-height: 1;
+}
+
+.ref-message {
+    color: #0f172a !important;
+    font-weight: 600;
+    background-color: #f8fafc;
+    border: 1px solid rgba(0, 17, 150, 0.1);
+    border-radius: 0.35rem;
+    padding: 0.75rem 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #001196;
+    border-color: #001196;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .fs-5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #navcol-1.show,
+    #navcol-1.collapsing {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    [data-reflow-type="view-cart"] {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
