@@ -105,7 +105,3 @@ This project is created for educational purposes as part of the Ateneo community
 ## 📧 Contact
 
 For questions, suggestions, or feedback, please visit our [Contacts](contacts.html) page.
-
----
-
-Made with ❤️ for the Ateneo community
